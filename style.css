@@ -1,0 +1,487 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,531;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,531;1,600;1,700;1,800;1,900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Courgette&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400;0,500;0,562;0,600;0,700;1,400;1,500;1,562;1,600;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html {
+  overflow: hidden;
+  background: #16222A;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3A6073, #16222A);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3A6073, #16222A);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+:root {
+  --button-shadow: 0.1em 0.1em rgb(130, 128, 128);
+  --off-white: rgb(249, 244, 236);
+  --off-white-mod: hsl(210deg, 8%, 82%);
+  --off-white-dk: hsl(210deg, 8%, 52%);
+  --medium-gray: rgb(183, 185, 182);
+  --dark-gray: rgb(75, 75, 75);
+  --dark-shadow: rgb(48, 48, 48);
+}
+
+#container {
+  padding: 4em 8em;
+}
+
+#npc-body {
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  left: 25vw;
+  top: 9vh;
+  padding: 1.5em;
+  border-radius: 5px;
+  width: 45em;
+  height: 35em;
+  grid-template-columns: 50% 50%;
+  z-index: 999;
+}
+
+#mpc-body {
+  text-align: center;
+  background-color: var(--off-white-mod);
+  position: relative;
+  margin: auto;
+  padding: 1.5em;
+  border: 1px solid #afaa9e;
+  border-radius: 3rem;
+  width: 45em;
+  height: 35em;
+  grid-template-columns: 50% 50%;
+  box-shadow: 0 0 2.5em 0.1em #aa9888;
+}
+
+.button {
+  box-shadow: var(--button-shadow);
+  border: 1px solid var(--medium-gray);
+  background-color: var(--off-white);
+  border-radius: 2px;
+}
+
+/* left side of MPC */
+#left-side {
+  grid-template-rows: 25% 10% 30% 35%;
+}
+
+/* screen and display */
+#screen {
+  justify-self: center;
+  background-color: #261c0d;
+  border-radius: 1.5rem;
+  height: 8em;
+  width: 20em;
+  display: grid;
+  box-shadow: 0 0 1em 0.1em #949494;
+}
+
+#display {
+  text-align: center;
+  margin: auto;
+  padding-top: 1em;
+  background-color: var(--medium-gray);
+  height: 6em;
+  width: 18.5em;
+  font-family: 'Courgette', cursive;
+  border-radius: 1.2rem;
+}
+
+#displayed-container {
+  text-align: center;
+  background: yellow;
+  font-family: 'Cousine', sans-serif;
+}
+
+/* buttons under screen */
+#button-line {
+  grid-template-columns: 1/6;
+  padding: 0.5em;
+}
+
+#button-line .button {
+  display: inline-grid;
+  background-color: var(--off-white);
+  width: 2em;
+  height: 0.8em;
+  place-self: center;
+  border: 1px solid var(--medium-gray);
+}
+
+/* middle panel with buttons and dial */
+#mid-panel {
+  grid-template-columns: 50% 50%;
+  display: grid;
+}
+
+#button-grid {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 33% 33% 33%;
+  padding: 0.5em;
+}
+
+.button-blue {
+  background-color: #0e4271;
+  border-radius: 2px;
+  width: 2em;
+  height: 1em;
+  place-self: center;
+  box-shadow: var(--button-shadow);
+}
+
+#dial-panel {
+  grid-template-rows: 20% 80%;
+  display: grid;
+}
+
+#dial-panel .button {
+  display: inline-grid;
+  width: 2em;
+  height: 1em;
+  margin: 1em;
+}
+
+#dial {
+  background-color: var(--dark-gray);
+  border-radius: 50%;
+  height: 8em;
+  width: 8em;
+  margin: 0.5em auto;
+  box-shadow: 0.2em 0.1em 0.1em 0.2em var(--dark-shadow);
+}
+
+#dial-inner-1 {
+  border: 2px solid var(--dark-shadow);
+  border-radius: 50%;
+  height: 5.3em;
+  width: 5.3em;
+  margin-left: 2.9em;
+  margin-top: -8em;
+  box-shadow: 0 0 0.1em 0.1em var(--dark-shadow);
+}
+
+#dial-inner-2 {
+  position: relative;
+  background-color: #555555;
+  border-radius: 50%;
+  height: 2.5em;
+  width: 2.5em;
+  box-shadow: inset -0.2em 0.1em 0.3em 0.3em #393939;
+  margin-left: 2.7em;
+  margin-top: -6.5em;
+}
+
+/* bottom panel with slider and buttons */
+#bottom-panel {
+  display: grid;
+  grid-template-columns: [first] 25% [line2] 15% [line3] 15% [line4] 15% [line5] 15% [line6] 15% [end];
+  grid-template-rows: 50% 25% 25%;
+  margin-top: 0.5em;
+}
+
+#volume-slider {
+  -webkit-appearance: none;
+  outline: none;
+  background-color: transparent;
+  height: 10px;
+  rotate: -90deg;
+}
+
+#volume-icon {
+  position: relative;
+  left: 4rem;
+  top: -1.2rem;
+}
+
+#volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: var(--off-white);
+  border: 1px solid var(--dark-gray);
+  width: 1.75rem;
+  height: 2.65rem;
+  box-shadow: 0 0 0.2em 0.1em var(--medium-gray);
+}
+
+#volume-slider::-moz-range-thumb {
+  background-color: orange;
+}
+
+#volume-slider::-moz-range-progress {
+  background: black;
+}
+
+/* slider */
+#slider {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  position: relative;
+}
+
+#slider-bar {
+  background-color: var(--dark-gray);
+  width: 0.3em;
+  height: 9em;
+  margin: 1.5em 0 0 3em;
+  position: absolute;
+}
+
+#slider-knob {
+  position: absolute;
+  width: 2.3em;
+  height: 1.5em;
+  background-color: var(--off-white);
+  border: 1px solid #787777;
+  margin-top: 5em;
+  margin-left: 1.95em;
+  box-shadow: 0 0 0.2em 0.1em var(--medium-gray);
+}
+
+@keyframes slide {
+  33% {
+    transform: translateY(-2em);
+  }
+  66% {
+    transform: translateY(2em);
+  }
+}
+#buttons-1 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+#buttons-1 .button {
+  display: inline-grid;
+  width: 2em;
+  height: 1em;
+  place-self: center;
+  margin-top: 1.5em;
+}
+
+/* arrow selector */
+#arrows {
+  grid-column-start: 4;
+  grid-column-end: 7;
+}
+
+#arrow {
+  width: 4em;
+  height: 3em;
+  justify-self: center;
+  margin: 1.5em auto;
+}
+
+/* 2nd to bottom row of buttons */
+#buttons-t {
+  grid-column-start: 2;
+  grid-column-end: 7;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#buttons-t .button {
+  display: inline-grid;
+  width: 2.3em;
+  height: 0.8em;
+  margin: 0.2em;
+  place-self: center;
+}
+
+/* bottom row of buttons */
+#buttons-b {
+  grid-column-start: 2;
+  grid-column-end: 7;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+#buttons-b .button {
+  display: inline-grid;
+  width: 2.3em;
+  height: 1.7em;
+  margin: 0.2em;
+  place-self: end;
+}
+
+/* right side of MPC */
+#right-side {
+  grid-template-rows: 11% 24% 65%;
+}
+
+/* akai logo and MPC model */
+#brand {
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  position: relative;
+}
+
+#akai {
+  font: 3em 'Cormorant Garamond', serif;
+  color: #e4184f;
+  place-self: center;
+  font-weight: 500;
+}
+
+#akai-pro {
+  font: italic lighter 1.1em 'Cormorant Garamond', serif;
+  color: #e4184f;
+  justify-self: center;
+  font-weight: 400;
+}
+
+#model {
+  font: 1.5em 'Bitter', sans-serif;
+  letter-spacing: 0.11em;
+  color: #747472;
+  place-self: center;
+}
+
+#underline {
+  border-top: 3px solid black;
+  padding-top: 0.5em;
+  font: 0.7em 'Bitter', sans-serif;
+  letter-spacing: 0.11em;
+}
+
+/* right side control panel */
+#right-ctrl {
+  background-color: var(--medium-gray);
+  margin: 0.5em;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-auto-rows: auto;
+  box-shadow: inset -1em 1em 2em 2em #b4b4b4;
+  border-radius: 1.55rem;
+}
+
+#right-ctrl .button {
+  width: 2.5em;
+  height: 1.2em;
+  place-self: center;
+}
+
+#right-ctrl .knob {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  justify-self: center;
+  align-self: end;
+  box-shadow: 0.3em 0.3em 0.1em 0.1em #828080;
+}
+
+/* drum pads  */
+#pads {
+  justify-self: stretch;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 33% 33% 33%;
+  background-color: var(--off-white-dk);
+  border-radius: 2rem;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
+.pad {
+  background-color: #dfd9c8;
+  text-align: center;
+  place-self: stretch;
+  margin: 0.25em;
+  padding-top: 1.8em;
+  border-radius: 2.5rem;
+  border: 0.25em solid var(--dark-gray);
+  box-shadow: inset 0 0 0.5em var(--dark-gray);
+  box-shadow: 2px 2px 0 var(--dark-gray);
+}
+
+/* button and key presses */
+.pressed {
+  transition-duration: 0.15s;
+  transform: scale(0.92);
+  transform: translateY(3px) translateX(1px);
+  box-shadow: inset 0.1em 0.1em 0.6em 0.2em var(--dark-gray);
+}
+
+.btn-pressed {
+  transform: translateY(2px) translateX(1px);
+}
+
+/* footer */
+footer {
+  font: 1em 'Dosis', sans-serif;
+  padding-top: 2em;
+  text-align: center;
+}
+
+/* modular properties */
+.grid {
+  display: grid;
+}
+
+.br-2 {
+  border-radius: 2px;
+}
+
+.cousine {
+  font-family: 'Cousine', monospace;
+}
+
+.bg-white {
+  background-color: var(--off-white);
+}
+
+.bg-salmon {
+  background-color: #f48bb1;
+}
+
+.bg-orange {
+  background-color: #eeb639;
+}
+
+.bg-red {
+  background-color: #a22b2b;
+}
+
+.sm-button {
+  border: 1px solid #b7b9b6;
+  box-shadow: var(--button-shadow);
+}
+
+#drum-keys {
+  visibility: hidden;
+}
+
+#bould {
+  padding-left: 0px;
+  padding-right: 0px;
+  width: 5.5rem;
+  position: relative;
+  left: 0rem;
+  top: 1rem;
+  font-weight: 575;
+  font-family: 'Courgette', cursive;
+}
+
+#power-switch {
+  position: relative;
+  top: 4.55rem;
+  left: -8.6rem;
+  border-radius: 5rem;
+}
+
+#kits {
+  position: relative;
+  color: var(--off-white);
+  background-color: var(--dark-gray);
+  top: 2.1rem;
+  left: -5.5rem;
+  border-radius: 0.45rem;
+}
+
+#volume-slider {
+  position: relative;
+  left: -9rem;
+  top: 19rem;
+}
+
+#all {
+  position: static;
+}

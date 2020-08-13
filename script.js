@@ -1,0 +1,476 @@
+// Music Data
+const drumSoundsKit_1 = [
+{
+  keyCode: 81, // Q
+  name: '808 - Starburst',
+  sound: new Audio("https://res.cloudinary.com/dvvu0wecp/video/upload/v1596822965/Beats/Andromeda/808/starburst_qwqaly.wav") },
+{
+  keyCode: 87, // W
+  name: 'Kick 6',
+  sound: new Audio("https://res.cloudinary.com/dvvu0wecp/video/upload/v1596823031/Beats/Andromeda/Kicks/KYLE_BEATS_ANDROMEDA_-_KICK_6_sik91e.wav") },
+{
+  keyCode: 69, // E
+  name: 'Clap 4',
+  sound: new Audio("https://res.cloudinary.com/dvvu0wecp/video/upload/v1596823033/Beats/Andromeda/Claps/KYLE_BEATS_ANDROMEDA_-_CLAP_4_yckrzw.wav") },
+{
+  keyCode: 65, // A
+  name: 'Hi Hat 3',
+  sound: new Audio('https://res.cloudinary.com/dvvu0wecp/video/upload/v1596823010/Beats/Andromeda/Hi%20Hats/KYLE_BEATS_-_ANDROMEDA_HI_HAT_3_afhncp.wav') },
+{
+  keyCode: 83, // S
+  name: 'Snare - Ok Then',
+  sound: new Audio('https://res.cloudinary.com/dixehwylu/video/upload/v1534275533/Drum_Machine/sounds/kit2/808-Maracas2.mp3') },
+{
+  keyCode: 68, // D
+  name: 'Crickets',
+  sound: new Audio('https://res.cloudinary.com/dvvu0wecp/video/upload/v1596822904/Beats/Andromeda/Perc/CRICKETS_pieksd.wav') },
+{
+  keyCode: 90, // Z
+  name: 'Out',
+  sound: new Audio('https://res.cloudinary.com/dvvu0wecp/video/upload/v1596823046/Beats/Andromeda/Vox%20Chant%20Vocals/Out_ip4n09.wav') },
+{
+  keyCode: 88, // X
+  name: 'Chirp',
+  sound: new Audio('https://res.cloudinary.com/dvvu0wecp/video/upload/v1596823053/Beats/Andromeda/Vox%20Chant%20Vocals/weeee_o5mfi6.wav') },
+{
+  keyCode: 67, // C
+  name: 'Wee',
+  sound: new Audio('https://res.cloudinary.com/dvvu0wecp/video/upload/v1596822904/Beats/Andromeda/Perc/NEXTEL_CHIRP_galqmz.wav') }];
+
+
+
+const drumSoundsKit_2 = [
+{
+  keyCode: 81, // Q
+  name: '808 - Babyonbaby',
+  sound: new Audio("https://res.cloudinary.com/dvvu0wecp/video/upload/v1596822965/Beats/Andromeda/808/babyonbaby_lqpo4t.wav") },
+{
+  keyCode: 87, // W
+  name: 'Kick 4',
+  sound: new Audio("https://res.cloudinary.com/dvvu0wecp/video/upload/v1596823031/Beats/Andromeda/Kicks/KYLE_BEATS_ANDROMEDA_-_KICK_4_c1afzy.wav") },
+{
+  keyCode: 69, // E
+  name: 'Clap 6',
+  sound: new Audio("https://res.cloudinary.com/dvvu0wecp/video/upload/v1596823033/Beats/Andromeda/Claps/KYLE_BEATS_ANDROMEDA_-_CLAP_6_cfpc0b.wav") },
+{
+  keyCode: 65, // A
+  name: 'Hi Hat 6',
+  sound: new Audio('https://res.cloudinary.com/dvvu0wecp/video/upload/v1596823010/Beats/Andromeda/Hi%20Hats/KYLE_BEATS_-_ANDROMEDA_HI_HAT_6_f5vqa3.wav') },
+{
+  keyCode: 83, // S
+  name: 'Snare Dippy',
+  sound: new Audio('https://res.cloudinary.com/dvvu0wecp/video/upload/v1596822569/Beats/Andromeda/Snares/dippy_whccrn.wav') },
+{
+  keyCode: 68, // D
+  name: 'Open Hat 2',
+  sound: new Audio('https://res.cloudinary.com/dvvu0wecp/video/upload/v1596823101/Beats/Andromeda/Open%20Hats/KYLE_BEATS_-_ANDROMEDA_OPEN_HAT_2_yicrvr.wav') },
+{
+  keyCode: 90, // Z
+  name: 'Left Field',
+  sound: new Audio('https://res.cloudinary.com/dvvu0wecp/video/upload/v1596822904/Beats/Andromeda/Perc/LEFT_FIELD_yoavpg.wav') },
+{
+  keyCode: 88, // X
+  name: 'Reem',
+  sound: new Audio('https://res.cloudinary.com/dvvu0wecp/video/upload/v1596823048/Beats/Andromeda/Vox%20Chant%20Vocals/REEM_pnuprm.wav') },
+{
+  keyCode: 67, // C
+  name: 'Kill Bill',
+  sound: new Audio('https://res.cloudinary.com/dvvu0wecp/video/upload/v1596822907/Beats/Andromeda/Perc/KILL_BILL_SIREN_efbejs.wav') }];
+
+
+
+const drumSoundsKit_3 = [
+{
+  keyCode: 81, // Q
+  name: '808 Lettuce',
+  sound: new Audio("https://res.cloudinary.com/dvvu0wecp/video/upload/v1596822965/Beats/Andromeda/808/lettuce_knu06o.wav") },
+{
+  keyCode: 87, // W
+  name: 'Kick 1',
+  sound: new Audio("https://res.cloudinary.com/dvvu0wecp/video/upload/v1596823031/Beats/Andromeda/Kicks/KYLE_BEATS_ANDROMEDA_-_KICK_1_fnorgd.wav") },
+{
+  keyCode: 69, // E
+  name: 'Clap 1',
+  sound: new Audio("https://res.cloudinary.com/dvvu0wecp/video/upload/v1596823032/Beats/Andromeda/Claps/KYLE_BEATS_ANDROMEDA_-_CLAP_1_youkew.wav") },
+{
+  keyCode: 65, // A
+  name: 'Hi Hat 2',
+  sound: new Audio('https://res.cloudinary.com/dvvu0wecp/video/upload/v1596823010/Beats/Andromeda/Hi%20Hats/KYLE_BEATS_-_ANDROMEDA_HI_HAT_2_sxuhc5.wav') },
+{
+  keyCode: 83, // S
+  name: 'Snare Slippy',
+  sound: new Audio('https://res.cloudinary.com/dvvu0wecp/video/upload/v1596822569/Beats/Andromeda/Snares/slip_lln2xw.wav') },
+{
+  keyCode: 68, // D
+  name: 'Awesome Crash',
+  sound: new Audio('https://res.cloudinary.com/dvvu0wecp/video/upload/v1596822907/Beats/Andromeda/Perc/AWESOME_CRASH_tswuca.wav') },
+{
+  keyCode: 90, // Z
+  name: 'Scared',
+  sound: new Audio('https://res.cloudinary.com/dvvu0wecp/video/upload/v1596822906/Beats/Andromeda/Perc/SACRED_ln0gsx.wav') },
+{
+  keyCode: 88, // X
+  name: 'Fixit',
+  sound: new Audio('https://res.cloudinary.com/dvvu0wecp/video/upload/v1596822904/Beats/Andromeda/Perc/FIXIT_a1uli2.wav') },
+{
+  keyCode: 67, // C
+  name: 'Do Yah',
+  sound: new Audio('https://res.cloudinary.com/dvvu0wecp/video/upload/v1596823053/Beats/Andromeda/Vox%20Chant%20Vocals/Do_ya_txxwd9.wav') }];
+
+
+
+const kits = { kit1: drumSoundsKit_1, kit2: drumSoundsKit_2, kit3: drumSoundsKit_3 };
+
+//--------------------------------------------------------------------------
+//                       Vue Components
+// Volume component
+Vue.component('Volume', {
+  template: `
+      <label for="volume-slider"> 
+
+         <span id="volume-icon">
+            <i class="fas fa-volume-down"/> 
+         </span>
+
+         <input 
+           type="range" 
+           id="volume-slider" 
+           min="0" max="100" 
+           :value="volumeDisplayValue"
+           v-on:change="volumeControl"/>
+       </label>
+   `,
+  props: ['currentElement'],
+  data() {
+    return {
+      volumeDisplayValue: '30' };
+
+  },
+  methods: {
+    volumeIcon(value) {
+      return (
+        value >= 1 && value < 50 ?
+        'fas fa-volume-down' : value >= 50 ?
+        'fas fa-volume-up' : 'fas fa-volume-off');
+    },
+    volumeControl(e) {
+      this.volumeDisplayValue = e.target.value;
+      const computedValue = Number(e.target.value) / 100;
+      const classIcon = this.volumeIcon(Number(e.target.value));
+      this.$emit('volumeChange', computedValue);
+      document.getElementById('volume-icon').innerHTML = `
+            <i class="${classIcon}">
+         `;
+      this.currentElement.volume = computedValue;
+    } } });
+
+
+
+// KitSelector component
+Vue.component('KitSelector', {
+  template: `
+      <select 
+         name="kits" 
+         id="kits" 
+         v-on:change="kitsSelect"
+         value="kit1"
+         selected="selected">
+         <option value="kit1">kit 1</option>
+         <option value="kit2">kit 2</option>
+         <option value="kit3">kit 3</option>
+      </select> 
+   `,
+  methods: {
+    kitsSelect(e) {
+      this.$emit('kitSelect', kits[e.target.value]);
+    } } });
+
+
+
+
+// DrumKeys component
+Vue.component('DrumKeys', {
+  template: `
+      <div id="drum-keys">
+         <button 
+             class="drum-pad pad" 
+             v-for="({ keyCode, name, sound }, index) in currentSoundKit"
+             :key="index"
+             :id="letter(keyCode)+'-'+index"
+             v-on:click=" e => playOnClick(keyCode, name, sound)" 
+             :disabled="disabled"       
+             >{{ letter(keyCode).toUpperCase() }}
+             <audio 
+                 :id="letter(keyCode).toUpperCase()" 
+                 class="clip" 
+                 :src="sound.src" />
+         </button>
+      </div> 
+   `,
+  props: {
+    currentSoundKit: {
+      type: Array,
+      required: true },
+
+    volume: {
+      type: Number },
+
+    disabled: {
+      type: Boolean } },
+
+
+  data() {
+    return {
+      soundPath: '' };
+
+  },
+  methods: {
+    letter: key => String.fromCharCode(key),
+    playOnClick(aKey, name) {
+      const key = this.letter(aKey);
+      this.addClassOnPressAndPlay(key, name);
+    },
+    addClassOnPressAndPlay(key, name) {
+      const element = document.getElementById(key.toUpperCase());
+      const parentElement = element.parentElement;
+      const displaySound = document.getElementById('display');
+      parentElement.classList.add('button-active');
+      setTimeout(() => parentElement.classList.remove('button-active'), 200);
+      displaySound.textContent = name;
+      this.$emit('currentElement', element);
+      // Audio element manipulation 
+      element.volume = this.volume;
+      element.play();
+      element.currentTime = 0;
+    } },
+
+  created() {
+    window.addEventListener('keydown', e => {
+      this.currentSoundKit.forEach(({ name, keyCode }, index) => {
+        if (e.keyCode === keyCode && this.disabled === false) {
+          this.addClassOnPressAndPlay(e.key, name);
+        }
+      });
+    });
+  } });
+
+
+// DrumMachine component
+Vue.component('DrumMachine', {
+  template: `
+      <div id="drum-machine">
+        
+<p id="displayvol"><p id="bould">Volume: {{ parseInt(volume * 100) }}</p></p>
+          <div id="controls">
+            <button v-on:click="powerHandle" id="power-switch" class="power-switch">
+              <i class="fas fa-power-off" />  
+            </button>           
+            <Volume 
+               @volumeChange="volume = $event" 
+               :currentElement="currentElement"   
+               /> 
+            <KitSelector @kitSelect="currentSoundKit = $event"/> 
+          </div>
+
+         <div id="display-keys-wraper">
+
+            <div id="display-containter">
+              <div id="displayed-container">
+ 
+              </div>         
+              
+            </div>
+
+            <DrumKeys 
+              v-bind:currentSoundKit="currentSoundKit"
+              v-bind:volume="volume" 
+              v-bind:disabled="disabled"
+              @currentElement="currentElement=$event"/>             
+          </div>         
+       </div>
+   `,
+  data() {
+    return {
+      soundName: 'Sound',
+      disabled: false,
+      volume: 0.4,
+      currentSoundKit: kits.kit1,
+      currentElement: null };
+
+  },
+  methods: {
+    powerHandle(e) {
+      const PowerSound = new Audio('https://res.cloudinary.com/dvvu0wecp/video/upload/v1596832419/Beats/Button-SoundBible.com-1420500901_dobbfq.wav');
+      PowerSound.currentTime = 0;
+      PowerSound.play();
+      this.disabled = !this.disabled;
+      this.disabled ?
+      e.target.classList.add('btn-disabled') :
+      e.target.classList.remove('btn-disabled');
+    } } });
+
+
+
+//------------------------------------------------------------------
+// Vue instance
+new Vue({
+  el: '#vue-app',
+  template: `
+      <div class="app-container">
+         <DrumMachine />      
+      </div>
+     ` });
+
+
+const pads = document.querySelectorAll('.pad');
+const buttons = document.querySelectorAll('.button');
+const display = document.getElementById('displayed-container');
+const sounds = {
+  65: {
+    char: 'A',
+    audio: new Audio('https://mpc2000.nyc3.digitaloceanspaces.com/kick1.mp3'),
+    vol: 1,
+    name: 'KICK 1' },
+
+  83: {
+    char: 'S',
+    audio: new Audio('https://mpc2000.nyc3.digitaloceanspaces.com/kick3.mp3'),
+    vol: 1,
+    name: 'KICK 2' },
+
+  68: {
+    char: 'D',
+    audio: new Audio('https://mpc2000.nyc3.digitaloceanspaces.com/snareclap.mp3'),
+    vol: 0.6,
+    name: 'SNARE 1' },
+
+  70: {
+    char: 'F',
+    audio: new Audio('https://mpc2000.nyc3.digitaloceanspaces.com/snare19.mp3'),
+    vol: 1,
+    name: 'SNARE 2' },
+
+  81: {
+    char: 'Q',
+    audio: new Audio('https://mpc2000.nyc3.digitaloceanspaces.com/9clap1.mp3'),
+    vol: 0.7,
+    name: 'CLAP 1' },
+
+  72: {
+    char: 'H',
+    audio: new Audio('https://mpc2000.nyc3.digitaloceanspaces.com/pop1.mp3'),
+    vol: 1,
+    name: 'PERC 1' },
+
+  74: {
+    char: 'J',
+    audio: new Audio('https://mpc2000.nyc3.digitaloceanspaces.com/synth3.mp3'),
+    vol: 1,
+    name: 'SYNTH' },
+
+  75: {
+    char: 'K',
+    audio: new Audio('https://mpc2000.nyc3.digitaloceanspaces.com/strings2.mp3'),
+    vol: 1,
+    name: 'STRINGS 1' },
+
+  76: {
+    char: 'L',
+    audio: new Audio('https://mpc2000.nyc3.digitaloceanspaces.com/strings22.mp3'),
+    vol: 1,
+    name: 'STRINGS 2' },
+
+  85: {
+    char: 'U',
+    audio: new Audio('https://mpc2000.nyc3.digitaloceanspaces.com/wood1.mp3'),
+    vol: 1,
+    name: 'PERC 2' },
+
+  73: {
+    char: 'I',
+    audio: new Audio('https://mpc2000.nyc3.digitaloceanspaces.com/harp1.mp3'),
+    vol: 1,
+    name: 'HARP 1' },
+
+  79: {
+    char: 'O',
+    audio: new Audio('https://mpc2000.nyc3.digitaloceanspaces.com/harp2.mp3'),
+    vol: 1,
+    name: 'HARP 2' },
+
+  80: {
+    char: 'P',
+    audio: new Audio('https://mpc2000.nyc3.digitaloceanspaces.com/harp3.mp3'),
+    vol: 1,
+    name: 'HARP 3' } };
+
+
+
+displayed.innerText = "Press a key to begin!";
+
+// Play sounds
+function playSound(code) {
+  const sound = sounds[code].audio;
+  const text = sounds[code].name;
+  sound.play();
+  sound.volume = sounds[code].vol;
+  sound.currentTime = 0;
+  display.innerText = text;
+}
+
+// Trigger sounds on key press
+document.addEventListener('keydown', keyPress);
+
+function keyPress(e) {
+  let key = document.querySelector(`.pad[data-key='${e.keyCode}']`);
+  let code = e.keyCode;
+  if (key === null) {
+    return;
+  }
+  key.classList.add('pressed');
+  playSound(code);
+}
+
+// Trigger sounds on pad click
+pads.forEach(function (pad) {
+  addEventListener('click', padClick);
+});
+
+function padClick(e) {
+  if (e.target.className === 'pad') {
+    let code = e.target.dataset.key;
+    e.target.classList.add('pressed');
+    playSound(code);
+  }
+}
+
+// Remove pressed CSS class
+pads.forEach(function (pad) {
+  pad.addEventListener('transitionend', removePressed);
+});
+
+function removePressed(e) {
+  e.target.classList.remove('pressed');
+}
+
+// Clicks for buttons
+function pressBtn(e) {
+  e.target.classList.toggle('btn-pressed');
+}
+
+buttons.forEach(function (button) {
+  button.addEventListener('click', pressBtn);
+});
+
+// Change cursor
+pads.forEach(function (pad) {
+  addEventListener('mouseover', changeCursor);
+});
+
+function changeCursor(e) {
+  if (e.target.classList.contains('pad')) {
+    document.body.style.cursor = 'pointer';
+  } else {
+    document.body.style.cursor = 'default';
+  }
+}
